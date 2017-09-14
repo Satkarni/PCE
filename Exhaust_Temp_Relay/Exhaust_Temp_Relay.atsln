@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Exhaust_Temp_Relay", "Exhaust_Temp_Relay.cproj", "{409B0546-D2BF-46FB-A23C-68C2EBD8D8D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{409B0546-D2BF-46FB-A23C-68C2EBD8D8D7}.Debug|AVR.ActiveCfg = Debug|AVR
+		{409B0546-D2BF-46FB-A23C-68C2EBD8D8D7}.Debug|AVR.Build.0 = Debug|AVR
+		{409B0546-D2BF-46FB-A23C-68C2EBD8D8D7}.Release|AVR.ActiveCfg = Release|AVR
+		{409B0546-D2BF-46FB-A23C-68C2EBD8D8D7}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LogWindow</class>
+ <widget class="QDialog" name="LogWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>372</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Write Log</string>
+  </property>
+  <widget class="QTableWidget" name="logTable">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>521</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="rowCount">
+    <number>5</number>
+   </property>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <column>
+    <property name="text">
+     <string>Date/Time</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Rated Speed</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>No. of Teeth</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Overspeed Percentage</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Trip Delay</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

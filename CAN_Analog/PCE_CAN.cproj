@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{3d968700-8160-491b-8b30-c3faf2c1bd53}</ProjectGuid>
+    <avrdevice>AT90CAN128</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>PCE_CAN</AssemblyName>
+    <Name>PCE_CAN</Name>
+    <RootNamespace>PCE_CAN</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagDbgClock>3010000</JtagDbgClock>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800021840</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>F_CPU=16000000</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_disable_dyn_filter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_error_register.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_get_buf_message.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_get_dyn_filter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_get_message.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_send_buf_message.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_send_message.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_set_dyn_filter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\at90can_set_mode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\can.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\can_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\can_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\can_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_bus_lib\utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_scanner\CANHandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_scanner\CANHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="can_scanner\J1939.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\AlarmPage.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\AlarmPage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\Alarms.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\Alarms.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\ConfigPage.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\ConfigPage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\Display.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\Display.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\Page.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\Page.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\ReadingConverter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="display\ReadingConverter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EventHandler\EventHandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EventHandler\EventHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EventHandler\KeypadTriggers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EventHandler\KeypadTriggers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EventHandler\ValueChangeTriggers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EventHandler\ValueChangeTriggers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\arial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\arial_9.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\arial_bold_14.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\arial_del.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\berlin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\courier.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\ks0108.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\ks0108.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\pce_glcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\pce_glcd_1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\pce_logo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\sanserif.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\sanserif_12.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\simple.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\simple_12.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="glcd\times_new_roman.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inputoutput\ExternalInterrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inputoutput\ExternalInterrupts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inputoutput\Hardware.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inputoutput\ioHandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inputoutput\ioHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PCE_CAN.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PCE_CAN.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\HardwareTimer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\SensorHandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\SensorHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\SensorsDAO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\SensorsDAO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\TimerDAO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\TimerDAO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\TimerQueue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensor_lib\TimerQueue.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="inputoutput" />
+    <Folder Include="EventHandler" />
+    <Folder Include="display" />
+    <Folder Include="glcd" />
+    <Folder Include="can_bus_lib" />
+    <Folder Include="can_scanner" />
+    <Folder Include="sensor_lib" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

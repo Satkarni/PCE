@@ -1,0 +1,13 @@
+[Unit]
+Description="Modbus PLC Data Logger"
+
+[Service]
+User=piyush
+Type=forking
+ExecStart=/usr/local/sbin/modbusd
+Restart=on-failure
+KillSignal=SIGTERM
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target

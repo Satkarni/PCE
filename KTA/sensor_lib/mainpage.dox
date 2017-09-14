@@ -1,0 +1,7 @@
+/**
+@mainpage Overview
+
+This is a library to easily manage sensors and timers in AVR based projects. Commonly used sensor data is abstracted and automatically handled by the library. Timers are implemented using queues with very little intervention required from the user.
+
+Sensors and timers have been implemented using linked lists alongwith dynamic memory allocation. So, the library will only use as much memory as the number of sensors required. The number of sensors that can be handled by the library is only limited by the memory available to it. 
+*/

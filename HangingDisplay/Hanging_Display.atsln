@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Hanging_Display", "Hanging_Display.cproj", "{30D9AA9E-BBA7-4987-902E-697B7E8312A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D9AA9E-BBA7-4987-902E-697B7E8312A8}.Debug|AVR.ActiveCfg = Debug|AVR
+		{30D9AA9E-BBA7-4987-902E-697B7E8312A8}.Debug|AVR.Build.0 = Debug|AVR
+		{30D9AA9E-BBA7-4987-902E-697B7E8312A8}.Release|AVR.ActiveCfg = Release|AVR
+		{30D9AA9E-BBA7-4987-902E-697B7E8312A8}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

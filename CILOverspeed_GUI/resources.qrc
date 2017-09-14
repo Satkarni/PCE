@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>PCE-Logo-3.png</file>
+    </qresource>
+</RCC>

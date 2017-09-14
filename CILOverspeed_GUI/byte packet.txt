@@ -1,0 +1,21 @@
+Transmit packet
+function - 1 byte ( 01 - write, 02- read, 03 - test,04 - logs, 05 - read rpm rest TBD) 
+
+rated speed -   - data - 2 bytes speed
+current speed - data - 2 bytes
+num of teeth   - data - 2 bytes teeth
+overspd %  - data - 1 byte %
+trip delay - 1 byte
+
+yy - 1 byte
+mm - 1 byte
+dd - 1 byte
+hh - 1 byte
+mn - 1 byte
+
+
+crc - 2 bytes
+
+
+
+

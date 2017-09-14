@@ -1,0 +1,12 @@
+/**
+@mainpage PCE CAN Controller Developer Manual
+@section intro_sec Introduction
+
+This program uses the AT90CAN processor alongwith a membrane keypad and a KS0108 GLCD. It reads data over a CAN bus and displays it on the GLCD. Two relays have been provided which can be used to enable alarms or to turn off the engine automatically.
+
+@section overview_sec Overview
+
+All functions and data structures used in the source code have been documented here. Any function, file, or module marked as ABSTRACT is used implicitly by the program and is not to be called explicitly at any given point.
+
+@warning This document is for developer use only.
+*/
